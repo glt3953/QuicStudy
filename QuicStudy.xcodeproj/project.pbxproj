@@ -16,6 +16,8 @@
 		F335E58A20219BE5002E66DF /* QuicStudyTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F335E58920219BE5002E66DF /* QuicStudyTests.m */; };
 		F335E59520219BE5002E66DF /* QuicStudyUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = F335E59420219BE5002E66DF /* QuicStudyUITests.m */; };
 		F335F4C620219C6E002E66DF /* chromium-net in Resources */ = {isa = PBXBuildFile; fileRef = F335F4C520219C6E002E66DF /* chromium-net */; };
+		F335F4CA20219D53002E66DF /* NXQuicNetService.m in Sources */ = {isa = PBXBuildFile; fileRef = F335F4C920219D53002E66DF /* NXQuicNetService.m */; };
+		F335F4CD20219E38002E66DF /* Cronet.mm in Sources */ = {isa = PBXBuildFile; fileRef = F335F4CC20219E38002E66DF /* Cronet.mm */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +55,10 @@
 		F335E59420219BE5002E66DF /* QuicStudyUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QuicStudyUITests.m; sourceTree = "<group>"; };
 		F335E59620219BE5002E66DF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F335F4C520219C6E002E66DF /* chromium-net */ = {isa = PBXFileReference; lastKnownFileType = folder; path = "chromium-net"; sourceTree = "<group>"; };
+		F335F4C820219D53002E66DF /* NXQuicNetService.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NXQuicNetService.h; sourceTree = "<group>"; };
+		F335F4C920219D53002E66DF /* NXQuicNetService.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NXQuicNetService.m; sourceTree = "<group>"; };
+		F335F4CB20219E38002E66DF /* Cronet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Cronet.h; sourceTree = "<group>"; };
+		F335F4CC20219E38002E66DF /* Cronet.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = Cronet.mm; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +109,7 @@
 		F335E56F20219BE5002E66DF /* QuicStudy */ = {
 			isa = PBXGroup;
 			children = (
+				F335F4C720219D0E002E66DF /* NXQuicNet */,
 				F335F4C520219C6E002E66DF /* chromium-net */,
 				F335E57020219BE5002E66DF /* AppDelegate.h */,
 				F335E57120219BE5002E66DF /* AppDelegate.m */,
@@ -133,6 +140,17 @@
 				F335E59620219BE5002E66DF /* Info.plist */,
 			);
 			path = QuicStudyUITests;
+			sourceTree = "<group>";
+		};
+		F335F4C720219D0E002E66DF /* NXQuicNet */ = {
+			isa = PBXGroup;
+			children = (
+				F335F4CB20219E38002E66DF /* Cronet.h */,
+				F335F4CC20219E38002E66DF /* Cronet.mm */,
+				F335F4C820219D53002E66DF /* NXQuicNetService.h */,
+				F335F4C920219D53002E66DF /* NXQuicNetService.m */,
+			);
+			path = NXQuicNet;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -269,7 +287,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F335F4CD20219E38002E66DF /* Cronet.mm in Sources */,
 				F335E57520219BE5002E66DF /* ViewController.m in Sources */,
+				F335F4CA20219D53002E66DF /* NXQuicNetService.m in Sources */,
 				F335E58020219BE5002E66DF /* main.m in Sources */,
 				F335E57220219BE5002E66DF /* AppDelegate.m in Sources */,
 			);
@@ -436,6 +456,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = "";
+				HEADER_SEARCH_PATHS = "../chromium-net";
 				INFOPLIST_FILE = QuicStudy/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ningxia.QuicStudy;
@@ -451,6 +472,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = "";
+				HEADER_SEARCH_PATHS = "../chromium-net";
 				INFOPLIST_FILE = QuicStudy/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ningxia.QuicStudy;
