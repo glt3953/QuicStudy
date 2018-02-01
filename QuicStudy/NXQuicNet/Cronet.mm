@@ -7,6 +7,7 @@
 
 #include <memory>
 #include <vector>
+#include <iostream>
 
 #include "base/lazy_instance.h"
 #include "base/logging.h"
@@ -214,9 +215,7 @@ class CronetHttpProtocolHandlerDelegate
     return NO;
   }
 
-  gQuicHints.push_back(
-      std::make_unique<cronet::URLRequestContextConfig::QuicHint>(
-          quic_host, port, altPort));
+  gQuicHints.push_back(std::make_unique<cronet::URLRequestContextConfig::QuicHint>(quic_host, port, altPort));
 
   return YES;
 }
